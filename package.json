@@ -1,4 +1,5 @@
 {
+  "name": "wasm-canvas-demo",
   "scripts": {
     "clean": "shx rm -rf dist && shx mkdir -p dist",
     "build.decompile": "npm run build && wasm-decompile dist/graphics.wasm -o dist/graphics.c",

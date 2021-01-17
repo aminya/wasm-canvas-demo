@@ -1,7 +1,6 @@
 # WASM Canvas DEMO
 
-## Video
-Video over here: https://youtu.be/9lxnm9a-Yi8
+![canvas-demo](images/canvas-demo.png)
 
 ## Install
 You need to have `npm`. Then:
@@ -32,8 +31,3 @@ After you built:
 ```
 npm run serve
 ```
-
-
-### Contact
-
-If you have questions comment on the video or email me: mani@maniks.net

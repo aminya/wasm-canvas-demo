@@ -1,8 +1,10 @@
+extern "C" {
+
 const unsigned int WIDTH = 600;
 const unsigned int HEIGHT = 600;
 unsigned int BUFFER[WIDTH * HEIGHT];
 
-void go() {
+void draw() {
     unsigned int screen[600][600];
     int x;
     for (x = 0; x < WIDTH; x++) {
@@ -20,3 +22,7 @@ void go() {
         }
     }
 }
+
+
+
+} // extern C needed for exporting to wasm

@@ -48,7 +48,7 @@ function init_draw_wasm(instance, width, height) {
 // can be called for each frame
 // the wasm changes the memory and then canvas needs to be updated
 function draw_wasm(instance, ctx, image) {
-  instance.exports.go(); // here
+  instance.exports.draw(); // here
   ctx.putImageData(image, 0, 0);
 }
 

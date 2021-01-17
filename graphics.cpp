@@ -1,3 +1,5 @@
+extern "C" {
+
 const unsigned int WIDTH = 600;
 const unsigned int HEIGHT = 600;
 unsigned int BUFFER[WIDTH * HEIGHT];
@@ -20,3 +22,7 @@ void draw() {
         }
     }
 }
+
+
+
+} // extern C needed for exporting to wasm

@@ -2,7 +2,8 @@
   "name": "wasm-canvas-demo",
   "scripts": {
     "clean": "shx rm -rf dist && shx mkdir -p dist",
-    "build.decompile": "wasm-decompile dist/graphics.wasm -o dist/graphics.cpp",
+    "build.decompile": "wasm-decompile dist/graphics.wasm -o dist/graphics.c",
+    "build.wasm2js": "wasm2js dist/graphics.wasm -o dist/graphics.js",
     "build.wat": "wasm2wat dist/graphics.wasm -o dist/graphics.wat",
     "build.emsdk": "em++ graphics.cpp -o dist/graphics.wasm  -O3 -s EXPORTED_FUNCTIONS=\"['_draw', '_BUFFER']\" --no-entry",
     "build.asmjs": "em++ graphics.cpp -o dist/graphics.js -s WASM=0  -O3 -s EXPORTED_FUNCTIONS=\"['_draw', '_BUFFER']\" --no-entry",

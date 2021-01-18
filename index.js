@@ -33,16 +33,14 @@ function get_canvas(id) {
 // and Uint8ClampedArray is a live view to the underlying ArrayBuffer,
 // which is exported by the wasm as a memory instance.
 function init_draw_wasm(instance, width, height) {
-  const buffer_address = instance.exports.BUFFER.value; // here
-  const image = new ImageData(
+  return new ImageData(
       new Uint8ClampedArray(
-          instance.exports.memory.buffer, //here
-          buffer_address,
+          instance.exports.memory.buffer, // wasm memory buffer
+          /* buffer_address */ instance.exports.BUFFER.value, // here
           4 * width * height,
       ),
       width,
-  );
-  return image
+  )
 }
 
 // can be called for each frame

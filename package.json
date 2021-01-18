@@ -7,6 +7,7 @@
     "build.emsdk": "em++ graphics.cpp -o dist/graphics.wasm  -O3 -s EXPORTED_FUNCTIONS=\"['_draw', '_BUFFER']\" --no-entry",
     "build.asmjs": "em++ graphics.cpp -o dist/graphics.js -s WASM=0  -O3 -s EXPORTED_FUNCTIONS=\"['_draw', '_BUFFER']\" --no-entry",
     "build.clang": "clang++ graphics.cpp -o dist/graphics.wasm  -O3 --target=wasm32 -nostdlib -Wl,--no-entry -Wl,--export-all",
+    "build.d": "ldc2 ./graphics.d -od ./dist -O3 -mtriple=wasm32-unknown-unknown-wasm -betterC -L-allow-undefined && shx mv ./graphics.wasm ./dist",
     "build": "npm run build.clang",
     "build.clean": "npm run clean && npm run build",
     "serve": "light-server --serve . --open"

@@ -6,10 +6,9 @@ unsigned int BUFFER[WIDTH * HEIGHT];
 
 void draw() {
     unsigned int screen[600][600];
-    int x;
-    for (x = 0; x < WIDTH; x++) {
-        int y;
-        for (y = 0; y < HEIGHT; y++) {
+    for (int x = 0; x < WIDTH; x++) {
+        for (int y = 0; y < HEIGHT; y++) {
+
             unsigned int color;
             if (y < HEIGHT/2) {
                 color = 0xff0000ff; // RGBA little endian

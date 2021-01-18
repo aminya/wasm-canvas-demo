@@ -1,7 +1,7 @@
 extern(C): // disable D mangling
 
-const uint WIDTH = 600;
-const uint HEIGHT = 600;
+immutable uint WIDTH = 600;
+immutable uint HEIGHT = 600;
 uint[WIDTH * HEIGHT] BUFFER;
 
 void draw() @safe @nogc {

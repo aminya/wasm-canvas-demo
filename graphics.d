@@ -6,8 +6,8 @@ extern(C): // disable D mangling for wasm exports
 uint[WIDTH * HEIGHT] ImageDataBuffer;
 
 void draw() @safe @nogc {
-    for (auto x = 0u; x < WIDTH; x++) {
-        for (auto y = 0u; y < HEIGHT; y++) {
+    foreach (x; 0..WIDTH) {
+        foreach (y; 0..HEIGHT) {
 
             // RHS: RGBA little endian color
             ImageDataBuffer[WIDTH * x + y] =  y < HEIGHT/2 ? 0xff0000ff : 0xffff0000;

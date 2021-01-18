@@ -1,12 +1,12 @@
 extern(C): // disable D mangling
 
-immutable uint WIDTH = 600;
-immutable uint HEIGHT = 600;
+immutable auto WIDTH = 600u;
+immutable auto HEIGHT = 600u;
 uint[WIDTH * HEIGHT] BUFFER;
 
 void draw() @safe @nogc {
-    for (int x = 0; x < WIDTH; x++) {
-        for (int y = 0; y < HEIGHT; y++) {
+    for (auto x = 0u; x < WIDTH; x++) {
+        for (auto y = 0u; y < HEIGHT; y++) {
 
             uint color;
             if (y < HEIGHT/2) {

@@ -1,12 +1,12 @@
 extern "C" {
 
-const unsigned int WIDTH = 600;
-const unsigned int HEIGHT = 600;
+const auto WIDTH = 600u;
+const auto HEIGHT = 600u;
 unsigned int BUFFER[WIDTH * HEIGHT];
 
 void draw() {
-    for (int x = 0; x < WIDTH; x++) {
-        for (int y = 0; y < HEIGHT; y++) {
+    for (auto x = 0u; x < WIDTH; x++) {
+        for (auto y = 0u; y < HEIGHT; y++) {
 
             unsigned int color;
             if (y < HEIGHT/2) {

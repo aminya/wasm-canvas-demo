@@ -1,7 +1,8 @@
-extern(C): // disable D mangling
-
 immutable auto WIDTH = 600u;
 immutable auto HEIGHT = 600u;
+
+extern(C): // disable D mangling for wasm exports
+
 uint[WIDTH * HEIGHT] ImageDataBuffer;
 
 void draw() @safe @nogc {

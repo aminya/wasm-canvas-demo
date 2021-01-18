@@ -1,7 +1,8 @@
-extern "C" {
-
 const auto WIDTH = 600u;
 const auto HEIGHT = 600u;
+
+extern "C"  { // wasm exports should be extern C
+
 unsigned int ImageDataBuffer[WIDTH * HEIGHT];
 
 void draw() {
@@ -16,5 +17,4 @@ void draw() {
 }
 
 
-
-} // extern C needed for exporting to wasm
+}// extern C

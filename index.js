@@ -35,8 +35,8 @@ function get_canvas(id) {
 function init_draw_wasm(instance, width, height) {
   return new ImageData(
       new Uint8ClampedArray(
-          instance.exports.memory.buffer, // wasm memory buffer
-          /* buffer_address */ instance.exports.BUFFER.value, // here
+          instance.exports.memory.buffer, // wasm memory
+          instance.exports.ImageDataBuffer.value, // image data address
           4 * width * height,
       ),
       width,

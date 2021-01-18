@@ -8,12 +8,8 @@ void draw() @safe @nogc {
     for (auto x = 0u; x < WIDTH; x++) {
         for (auto y = 0u; y < HEIGHT; y++) {
 
-            uint color;
-            if (y < HEIGHT/2) {
-                color = 0xff0000ff; // RGBA little endian
-            } else {
-                color = 0xffff0000; // RGBA little endian
-            }
+            // RGBA little endian
+            const auto color = y < HEIGHT/2 ? 0xff0000ff : 0xffff0000;
 
             BUFFER[WIDTH * x + y] = color;
         }

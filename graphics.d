@@ -4,7 +4,7 @@ const uint WIDTH = 600;
 const uint HEIGHT = 600;
 uint[WIDTH * HEIGHT] BUFFER;
 
-void draw() {
+void draw() @safe @nogc {
     uint[600][600] screen;
     int x;
     for (x = 0; x < WIDTH; x++) {
